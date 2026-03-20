@@ -1,0 +1,490 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="About Us | Ecosoft — Open Source ERP Solutions"
+  description="Learn about Ecosoft — Thailand's trusted open source ERP partner. Our story, mission, values, and the team behind Odoo & ERPNext implementations."
+>
+
+  <!-- HERO -->
+  <section class="about-hero">
+    <div class="container about-hero-inner">
+      <div class="about-hero-copy">
+        <p class="eyebrow">Est. 2013 · Bangkok, Thailand</p>
+        <h1>Built on Code,<br />Driven by Purpose.</h1>
+        <p class="about-hero-lead">
+          We believe businesses deserve powerful software without the lock-in, the bloat,
+          or the sky-high license fees. Ecosoft was founded to make enterprise-grade ERP
+          accessible to every organisation — through the power of open source.
+        </p>
+      </div>
+      <div class="about-hero-illustration">
+        <!-- SVG illustration: open source collaboration -->
+        <svg viewBox="0 0 480 380" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- Background circle -->
+          <circle cx="240" cy="190" r="160" fill="var(--bg-card-blue)" opacity="0.5"/>
+
+          <!-- Building / office -->
+          <rect x="140" y="180" width="200" height="130" rx="6" fill="var(--border-blue)" opacity="0.3"/>
+          <rect x="155" y="180" width="200" height="130" rx="6" fill="#1d4ed8" opacity="0.12"/>
+          <rect x="155" y="192" width="200" height="118" rx="4" fill="#2563eb" opacity="0.08"/>
+
+          <!-- Windows -->
+          <rect x="175" y="210" width="28" height="24" rx="3" fill="#2563eb" opacity="0.5"/>
+          <rect x="219" y="210" width="28" height="24" rx="3" fill="#2563eb" opacity="0.5"/>
+          <rect x="263" y="210" width="28" height="24" rx="3" fill="#2563eb" opacity="0.5"/>
+          <rect x="307" y="210" width="28" height="24" rx="3" fill="#2563eb" opacity="0.5"/>
+
+          <rect x="175" y="248" width="28" height="24" rx="3" fill="#2563eb" opacity="0.35"/>
+          <rect x="219" y="248" width="28" height="24" rx="3" fill="#2563eb" opacity="0.35"/>
+          <rect x="263" y="248" width="28" height="24" rx="3" fill="#2563eb" opacity="0.35"/>
+          <rect x="307" y="248" width="28" height="24" rx="3" fill="#2563eb" opacity="0.35"/>
+
+          <!-- Door -->
+          <rect x="226" y="278" width="36" height="32" rx="3" fill="#1d4ed8" opacity="0.4"/>
+          <circle cx="258" cy="294" r="2.5" fill="#1d4ed8" opacity="0.9"/>
+
+          <!-- Roof / gable -->
+          <polygon points="140,182 255,100 370,182" fill="#1d4ed8" opacity="0.18"/>
+          <polygon points="155,182 255,108 355,182" fill="#2563eb" opacity="0.15"/>
+
+          <!-- Flag / logo on roof -->
+          <rect x="251" y="96" width="3" height="32" fill="#f97316" opacity="0.8"/>
+          <rect x="254" y="96" width="18" height="12" rx="2" fill="#f97316" opacity="0.8"/>
+
+          <!-- People / team dots -->
+          <!-- Person 1 -->
+          <circle cx="100" cy="270" r="18" fill="#f97316" opacity="0.15"/>
+          <circle cx="100" cy="260" r="10" fill="#f97316" opacity="0.6"/>
+          <path d="M82 292 Q100 278 118 292" stroke="#f97316" stroke-width="3" fill="none" opacity="0.6"/>
+
+          <!-- Person 2 -->
+          <circle cx="380" cy="270" r="18" fill="#22c55e" opacity="0.15"/>
+          <circle cx="380" cy="260" r="10" fill="#22c55e" opacity="0.6"/>
+          <path d="M362 292 Q380 278 398 292" stroke="#22c55e" stroke-width="3" fill="none" opacity="0.6"/>
+
+          <!-- Person 3 -->
+          <circle cx="240" cy="80" r="18" fill="#a855f7" opacity="0.15"/>
+          <circle cx="240" cy="70" r="10" fill="#a855f7" opacity="0.6"/>
+          <path d="M222 92 Q240 78 258 92" stroke="#a855f7" stroke-width="3" fill="none" opacity="0.6"/>
+
+          <!-- Connection lines -->
+          <line x1="108" y1="265" x2="170" y2="240" stroke="#f97316" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.4"/>
+          <line x1="372" y1="265" x2="340" y2="240" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.4"/>
+          <line x1="244" y1="80" x2="255" y2="110" stroke="#a855f7" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.4"/>
+
+          <!-- Open source gear icon -->
+          <circle cx="240" cy="190" r="22" fill="none" stroke="#f97316" stroke-width="3" opacity="0.7"/>
+          <circle cx="240" cy="190" r="10" fill="none" stroke="#f97316" stroke-width="2.5" opacity="0.7"/>
+          <path d="M240 165 L240 172 M240 208 L240 215 M215 190 L222 190 M258 190 L265 190
+                   M222 172 L227 177 M253 203 L258 208 M258 172 L253 177 M227 203 L222 208"
+                stroke="#f97316" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+
+          <!-- Ground line -->
+          <line x1="80" y1="310" x2="400" y2="310" stroke="var(--border)" stroke-width="1.5" opacity="0.4"/>
+
+          <!-- Stars / sparks -->
+          <circle cx="420" cy="130" r="3" fill="#f97316" opacity="0.5"/>
+          <circle cx="408" cy="155" r="2" fill="#2563eb" opacity="0.4"/>
+          <circle cx="435" cy="160" r="2" fill="#22c55e" opacity="0.4"/>
+          <circle cx="60" cy="150" r="3" fill="#a855f7" opacity="0.4"/>
+          <circle cx="72" cy="130" r="2" fill="#f97316" opacity="0.4"/>
+          <circle cx="50" cy="170" r="2" fill="#2563eb" opacity="0.4"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="section about-stats-section">
+    <div class="container">
+      <div class="about-stats-grid">
+        {[
+          { number: "10+", label: "Years in Business" },
+          { number: "40+", label: "Clients Served" },
+          { number: "4K+", label: "Deployed Users" },
+          { number: "120+", label: "Open Source Modules" },
+        ].map((s) => (
+          <div class="about-stat-card">
+            <p class="about-stat-number">{s.number}</p>
+            <p class="about-stat-label">{s.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="section section-alt">
+    <div class="container about-story-grid">
+      <div class="about-story-copy">
+        <p class="eyebrow">Our Story</p>
+        <h2>From Frustration to Mission</h2>
+        <p>
+          Ecosoft was born out of a simple frustration: why were so many Thai businesses
+          locked into expensive, rigid ERP systems that took years to implement and still
+          didn't fit their needs?
+        </p>
+        <p>
+          Our founders had spent years in enterprise software consulting and watched
+          organisations pour millions into proprietary platforms — only to fight the software
+          every step of the way. There had to be a better way.
+        </p>
+        <p>
+          In 2013, we bet everything on open source. We partnered with the Odoo and ERPNext
+          ecosystems, contributed to the OCA (Odoo Community Association), and built
+          Thailand-specific modules for tax compliance, accounting, and local business
+          workflows. Today those modules are used by hundreds of organisations worldwide.
+        </p>
+      </div>
+      <div class="about-story-timeline">
+        {[
+          { year: "2013", event: "Ecosoft founded in Bangkok, focusing on open source ERP" },
+          { year: "2015", event: "First Thai accounting & tax compliance modules released" },
+          { year: "2017", event: "Joined OCA — Odoo Community Association" },
+          { year: "2019", event: "Expanded into ERPNext / Frappe framework" },
+          { year: "2022", event: "Reached 100+ open source module contributions" },
+          { year: "2024", event: "4,000+ users running Ecosoft-powered ERP in Thailand" },
+        ].map((t) => (
+          <div class="about-timeline-item">
+            <span class="about-timeline-year">{t.year}</span>
+            <span class="about-timeline-event">{t.event}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VALUES -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow">What We Stand For</p>
+        <h2>Our Mission & Values</h2>
+        <p class="section-subtext">
+          Everything we do comes back to one belief: great software should be open,
+          honest, and built for the people who use it.
+        </p>
+      </header>
+      <div class="cards-grid about-values-grid">
+        {[
+          {
+            icon: "🔓",
+            title: "Open Source, Always",
+            body: "We only work with 100% open source platforms. No hidden fees, no vendor lock-in, no surprises. Your data and your system belong to you.",
+          },
+          {
+            icon: "🤝",
+            title: "Honest Partnerships",
+            body: "We tell you what you need, not what generates the biggest invoice. Long-term trust matters more to us than a short-term deal.",
+          },
+          {
+            icon: "🇹🇭",
+            title: "Built for Thailand",
+            body: "We understand Thai tax law, Thai accounting standards, and Thai business culture — because this is home. Our modules reflect that.",
+          },
+          {
+            icon: "🌱",
+            title: "Community First",
+            body: "We give back. Over 120 modules contributed to OCA and the ERPNext community, because open source only works when everyone contributes.",
+          },
+          {
+            icon: "⚡",
+            title: "Practical Over Perfect",
+            body: "We focus on solutions that work in the real world — fast to implement, easy to maintain, and easy for your team to actually use.",
+          },
+          {
+            icon: "📈",
+            title: "Growth Mindset",
+            body: "Business needs evolve. We build systems that grow with you, and we stay by your side through every upgrade, expansion, and pivot.",
+          },
+        ].map((v) => (
+          <div class="about-value-card">
+            <span class="about-value-icon">{v.icon}</span>
+            <h3>{v.title}</h3>
+            <p>{v.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY OPEN SOURCE -->
+  <section class="section section-accent">
+    <div class="container about-oss-inner">
+      <div class="about-oss-copy">
+        <p class="eyebrow">Why Open Source?</p>
+        <h2>Freedom Is Not a Feature — It's the Foundation</h2>
+        <p>
+          Proprietary ERP vendors charge for every user, every module, every upgrade.
+          They hold your data hostage and make customisation painfully expensive.
+          Open source flips that model entirely.
+        </p>
+        <p>
+          With Odoo and ERPNext, you own your system. You can customise anything,
+          extend anything, and move your data anywhere. A global community of developers
+          means the software improves every single day — and you benefit from that
+          innovation for free.
+        </p>
+        <p>
+          We've seen clients cut their total ERP cost by 60–80% compared to SAP or
+          Oracle — while getting <em>more</em> flexibility, not less.
+        </p>
+      </div>
+      <div class="about-oss-checklist">
+        {[
+          "Zero software license fees",
+          "Full source code access",
+          "Customise anything, own everything",
+          "No forced upgrades or end-of-life traps",
+          "Global developer community",
+          "Transparent roadmap & issue tracking",
+          "Thai compliance modules included",
+          "Backed by Ecosoft's 10+ years of expertise",
+        ].map((item) => (
+          <div class="about-check-item">
+            <span class="about-check-icon">✓</span>
+            <span>{item}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section about-cta-section">
+    <div class="container about-cta-inner">
+      <h2>Ready to Work Together?</h2>
+      <p>
+        Whether you're exploring ERP for the first time or migrating from a legacy system,
+        we'd love to have an honest conversation about what the right solution looks like for you.
+      </p>
+      <div class="about-cta-actions">
+        <a href="/#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="/#services" class="btn btn-outline">See Our Services</a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ── Hero ── */
+  .about-hero {
+    background: var(--bg);
+    padding: 5rem 0 3rem;
+  }
+  .about-hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  .about-hero-copy h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin: 0.75rem 0 1.25rem;
+  }
+  .about-hero-lead {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    max-width: 48ch;
+  }
+  .about-hero-illustration svg {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  /* ── Stats ── */
+  .about-stats-section {
+    padding: 3rem 0;
+  }
+  .about-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+  }
+  .about-stat-card {
+    padding: 2rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .about-stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #f97316;
+    margin: 0 0 0.25rem;
+    line-height: 1;
+  }
+  .about-stat-label {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  /* ── Story ── */
+  .about-story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-story-copy h2 {
+    margin: 0.5rem 0 1.25rem;
+  }
+  .about-story-copy p {
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .about-story-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-left: 2px solid var(--border-blue);
+    padding-left: 1.5rem;
+  }
+  .about-timeline-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding-bottom: 1.5rem;
+    position: relative;
+  }
+  .about-timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -1.65rem;
+    top: 0.35rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #2563eb;
+    border: 2px solid var(--bg);
+  }
+  .about-timeline-year {
+    font-weight: 700;
+    color: #2563eb;
+    font-size: 0.9rem;
+  }
+  .about-timeline-event {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  /* ── Values ── */
+  .about-values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .about-value-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.75rem;
+  }
+  .about-value-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .about-value-card h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.5rem;
+  }
+  .about-value-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* ── Open Source section ── */
+  .about-oss-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  .about-oss-copy h2 {
+    margin: 0.5rem 0 1.25rem;
+  }
+  .about-oss-copy p {
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  .about-oss-checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .about-check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    color: var(--text);
+  }
+  .about-check-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: #16a34a;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  /* ── CTA ── */
+  .about-cta-section {
+    text-align: center;
+  }
+  .about-cta-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .about-cta-inner h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    margin-bottom: 1rem;
+  }
+  .about-cta-inner p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .about-cta-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    .about-hero-inner,
+    .about-story-grid,
+    .about-oss-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .about-hero-illustration {
+      order: -1;
+    }
+    .about-stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .about-values-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
