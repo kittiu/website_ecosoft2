@@ -1,0 +1,443 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Odoo ERP | Ecosoft — Open Source ERP Solutions"
+  description="Odoo ERP: The ERP You'll Actually Enjoy Using. Modular, fully integrated, open-source. Consulting, implementation, and support by Ecosoft."
+>
+  <!-- HERO -->
+  <section class="odoo-hero">
+    <div class="container odoo-hero-inner">
+      <div class="odoo-hero-copy">
+        <p class="eyebrow">Modular · Fully Integrated · Open-source</p>
+        <h1>Odoo ERP: The ERP You'll<br />Actually Enjoy Using.</h1>
+        <p class="odoo-hero-lead">
+          Beautiful UI. Deep functionality. Over 12 million businesses already made the switch —
+          why not you?
+        </p>
+        <div class="odoo-hero-actions">
+          <a href="/#contact" class="btn btn-primary">Talk to us</a>
+          <a href="#modules" class="btn btn-outline">Explore modules</a>
+        </div>
+      </div>
+      <div class="product-hero-logo">
+        <img src="/images/odoo-logo.png" alt="Odoo" />
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE PROPOSITION -->
+  <section class="section section-alt">
+    <div class="container odoo-value-inner">
+      <header class="section-header">
+        <p class="eyebrow">Why Odoo</p>
+        <h2>Odoo isn't just any other ERP software.<br />It is how modern businesses run!</h2>
+      </header>
+      <p class="odoo-value-body">
+        With over 12 million users worldwide, Odoo is a powerful ERP solution offering fully
+        integrated modules that cover everything from accounting and CRM to manufacturing and
+        e-commerce. It simplifies complex operations and scales effortlessly with your business.
+      </p>
+      <p class="odoo-value-body">
+        Available in both Community and Enterprise editions, Odoo's open-source foundation makes
+        it highly customizable, scalable, and incredibly cost-effective. With 40,000+ add-on apps,
+        you can extend functionality to fit your needs perfectly — whether you're a growing startup
+        or a global enterprise.
+      </p>
+      <div class="odoo-stats">
+        <div class="odoo-stat">
+          <p class="metric-number">12M+</p>
+          <p class="metric-label">users worldwide</p>
+        </div>
+        <div class="odoo-stat">
+          <p class="metric-number">40K+</p>
+          <p class="metric-label">add-on apps</p>
+        </div>
+        <div class="odoo-stat">
+          <p class="metric-number">2</p>
+          <p class="metric-label">editions: Community & Enterprise</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDITIONS COMPARISON -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow">Editions</p>
+        <h2>Odoo Enterprise vs Community: Pick the Power You Need</h2>
+      </header>
+      <div class="odoo-editions-grid">
+        <div class="info-card odoo-edition-card">
+          <h3>Community Edition</h3>
+          <p class="odoo-edition-tag">Free &amp; Open Source</p>
+          <ul class="odoo-edition-list">
+            <li>Core ERP modules included</li>
+            <li>Self-hosted flexibility</li>
+            <li>Strong community support</li>
+            <li>40,000+ add-on apps</li>
+            <li>No license fees ever</li>
+          </ul>
+        </div>
+        <div class="info-card odoo-edition-card odoo-edition-featured">
+          <h3>Enterprise Edition</h3>
+          <p class="odoo-edition-tag">Full-Featured</p>
+          <ul class="odoo-edition-list">
+            <li>All Community features</li>
+            <li>Advanced modules (Studio, Sign, IoT…)</li>
+            <li>Odoo cloud hosting option</li>
+            <li>Official Odoo support</li>
+            <li>Mobile apps included</li>
+            <li>Upgrade assistance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULES -->
+  <section id="modules" class="section section-alt">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow">Modules</p>
+        <h2>Modules Powering Every Part of Your Business</h2>
+        <p>
+          Odoo ERP brings every business function under one roof with seamless integration and a
+          beautiful, user-friendly interface.
+        </p>
+      </header>
+      <div class="cards-grid odoo-modules-grid">
+        {[
+          {
+            icon: "📒",
+            name: "Finance & Accounting",
+            desc: "Everything from invoices and expenses to multi-company consolidation, handled in one seamlessly integrated suite.",
+          },
+          {
+            icon: "💼",
+            name: "Sales & Customer Management",
+            desc: "Close deals faster with CRM, sales automation, subscriptions, and real-time POS — all under one tab.",
+          },
+          {
+            icon: "📦",
+            name: "Inventory & Procurement",
+            desc: "Stay in control with smart stock movements, automated purchasing, and streamlined warehouse management.",
+          },
+          {
+            icon: "🏭",
+            name: "Manufacturing & Operations",
+            desc: "End-to-end manufacturing, quality, maintenance, and product lifecycle tools for total shop floor control.",
+          },
+          {
+            icon: "📋",
+            name: "Projects & Time Tracking",
+            desc: "Plan, assign, and monitor projects, timesheets, and appointments with ease and clarity.",
+          },
+          {
+            icon: "🛍️",
+            name: "Website & E-Commerce",
+            desc: "Build stunning websites, sell online, manage field service, and digitize signatures all in one place.",
+          },
+          {
+            icon: "📣",
+            name: "Marketing & Engagement",
+            desc: "Automate campaigns, go social, manage events, and market like a pro with built-in tools.",
+          },
+          {
+            icon: "👥",
+            name: "HR & Employee Experience",
+            desc: "Hire, manage, appraise, and retain top talent with a complete HR toolkit.",
+          },
+          {
+            icon: "🎓",
+            name: "Learning & Customization",
+            desc: "Empower teams with eLearning and customize anything with no code using Odoo Studio.",
+          },
+          {
+            icon: "🔗",
+            name: "Smart Integrations & Approvals",
+            desc: "Connect devices, streamline approvals, manage docs, and go paperless with powerful system-level features.",
+          },
+        ].map((m) => (
+          <div class="info-card">
+            <span class="odoo-module-icon">{m.icon}</span>
+            <h3>{m.name}</h3>
+            <p>{m.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATORS -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow">Differentiators</p>
+        <h2>Why Odoo ERP Stands Out From the ERP Crowd?</h2>
+        <p>
+          Not all ERPs are built equal — Odoo's open-source DNA, flexibility, and global community
+          set it apart. Here's why 12+ million users swear by it.
+        </p>
+      </header>
+      <div class="cards-grid odoo-diff-grid">
+        {[
+          {
+            icon: "🔓",
+            title: "No Vendor Lock-In",
+            desc: "Total freedom to host, modify, and scale on your terms.",
+          },
+          {
+            icon: "🌍",
+            title: "Globally Trusted",
+            desc: "Proven ERP platform with over 12 million users worldwide.",
+          },
+          {
+            icon: "⚡",
+            title: "All-in-One Functionality",
+            desc: "Everything from sales to support in one integrated system.",
+          },
+          {
+            icon: "🧩",
+            title: "40,000+ Add-On Apps",
+            desc: "Extend capabilities with ready-to-use apps from the Odoo App Store.",
+          },
+          {
+            icon: "🤝",
+            title: "Vibrant Global Community",
+            desc: "Thousands of developers and users improving Odoo every day.",
+          },
+        ].map((d) => (
+          <div class="info-card odoo-diff-card">
+            <span class="odoo-diff-icon">{d.icon}</span>
+            <h3>{d.title}</h3>
+            <p>{d.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRATIONS -->
+  <section class="section section-alt">
+    <div class="container odoo-integrations">
+      <header class="section-header">
+        <p class="eyebrow">Integrations</p>
+        <h2>Connect Anything. Sync Everything.</h2>
+        <p>
+          From e-commerce platforms to payment gateways, Odoo integrates effortlessly with 130+
+          tools — so your entire tech stack works in perfect harmony.
+        </p>
+      </header>
+      <div class="odoo-integration-image">
+        <img
+          src="/images/erpnext_integrations.webp"
+          alt="Odoo integrations including PayPal, Stripe, Shopify, Google, AWS, Slack and more"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section section-accent odoo-cta">
+    <div class="container">
+      <h2>Ready for an ERP That Actually Works for You?</h2>
+      <p>
+        No licenses. No limits. Just powerful, flexible, all-in-one business management — tailored
+        to your growth. It's free, forever. Let Ecosoft guide your implementation.
+      </p>
+      <a href="/#contact" class="btn btn-primary">Talk to our team</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .odoo-hero {
+    padding-block: 5rem;
+    background: linear-gradient(
+      135deg,
+      #f9f5f8 0%,
+      #ead8e6 25%,
+      #d9bdd3 50%,
+      #ead8e6 75%,
+      #f9f5f8 100%
+    );
+  }
+
+  html[data-theme="dark"] .odoo-hero {
+    background: linear-gradient(
+      135deg,
+      #1a0e17 0%,
+      #3b1f34 25%,
+      #4d2945 50%,
+      #3b1f34 75%,
+      #1a0e17 100%
+    );
+  }
+
+  .odoo-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: -0.04em;
+    margin: 0.5rem 0 1rem;
+    color: var(--text);
+  }
+
+  .odoo-hero-lead {
+    max-width: 42rem;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .odoo-hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Value proposition */
+  .odoo-value-body {
+    max-width: 52rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .odoo-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .odoo-stat .metric-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .odoo-stat .metric-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0.2rem 0 0;
+  }
+
+  /* Editions */
+  .odoo-editions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 52rem;
+  }
+
+  .odoo-edition-card h3 {
+    margin: 0 0 0.3rem;
+  }
+
+  .odoo-edition-tag {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin: 0 0 1rem;
+  }
+
+  .odoo-edition-featured {
+    border-color: #2563eb;
+    box-shadow: 0 10px 32px rgba(37, 99, 235, 0.22);
+  }
+
+  .odoo-edition-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .odoo-edition-list li::before {
+    content: "✓ ";
+    color: #16a34a;
+    font-weight: 700;
+  }
+
+  /* Modules */
+  .odoo-modules-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .odoo-module-icon {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Differentiators */
+  .odoo-diff-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .odoo-diff-icon {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Integrations */
+  .odoo-integration-image {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    border: 1px solid var(--border-blue);
+    background: var(--bg-card);
+  }
+
+  .odoo-integration-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  html[data-theme="dark"] .odoo-integration-image img {
+    filter: brightness(0.85) contrast(1.1);
+  }
+
+  /* CTA */
+  .odoo-cta {
+    text-align: center;
+  }
+
+  .odoo-cta h2 {
+    font-size: 1.9rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+
+  .odoo-cta p {
+    max-width: 38rem;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .odoo-editions-grid,
+    .odoo-modules-grid,
+    .odoo-diff-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 560px) {
+    .odoo-editions-grid,
+    .odoo-modules-grid,
+    .odoo-diff-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

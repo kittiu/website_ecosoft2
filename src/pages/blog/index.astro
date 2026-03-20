@@ -1,0 +1,211 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { formatDate } from '../../utils/formatDate';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout
+  title="Blog | Ecosoft"
+  description="Insights, case studies, and ERP know-how from the Ecosoft team."
+>
+  <section class="blog-hero">
+    <div class="container">
+      <p class="eyebrow">Blog</p>
+      <h1>Insights, case studies, and ERP know-how.</h1>
+      <p class="blog-hero-lead">
+        Real stories from real implementations, plus practical guides on getting
+        the most from open source ERP.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="blog-list">
+        {posts.map((post) => (
+          <article class="blog-card">
+            {post.data.image && (
+              <a href={`/blog/${post.slug}`} class="blog-card-img-wrap">
+                <img src={post.data.image} alt={post.data.title} class="blog-card-img" />
+              </a>
+            )}
+            <div class="blog-card-body">
+              <div class="blog-card-meta">
+                <span class="blog-category">{post.data.category}</span>
+                <span class="blog-date">{formatDate(post.data.date)}</span>
+              </div>
+              <h2 class="blog-card-title">
+                <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+              </h2>
+              <p class="blog-card-desc">{post.data.description}</p>
+              <div class="blog-card-footer">
+                <span class="blog-author">By {post.data.author}</span>
+                <a href={`/blog/${post.slug}`} class="blog-read-more">Read more →</a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .blog-hero {
+    padding-block: 3.5rem 3rem;
+    background:
+      radial-gradient(circle at top left, #dbeafe 0, transparent 60%),
+      radial-gradient(circle at top right, #fee2e2 0, transparent 60%),
+      linear-gradient(to bottom, #ffffff, #eff6ff 40%, #ffffff 70%);
+  }
+
+  .blog-hero h1 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    letter-spacing: -0.03em;
+    margin: 0 0 0.75rem;
+    color: #0f172a;
+  }
+
+  .blog-hero-lead {
+    margin: 0;
+    color: #4b5563;
+    max-width: 36rem;
+    font-size: 1rem;
+  }
+
+  .blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 52rem;
+  }
+
+  .blog-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    border-radius: 1.1rem;
+    border: 1px solid #dbeafe;
+    background: radial-gradient(circle at top left, #ffffff, #eff6ff);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
+    overflow: hidden;
+    transition: box-shadow 150ms ease-out;
+  }
+
+  .blog-card:hover {
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.18);
+  }
+
+  .blog-card-img-wrap {
+    display: block;
+    overflow: hidden;
+  }
+
+  .blog-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 200ms ease-out;
+    will-change: transform;
+  }
+
+  .blog-card:hover .blog-card-img {
+    transform: scale(1.04);
+  }
+
+  .blog-card-body {
+    padding: 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .blog-category {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #f97316;
+  }
+
+  .blog-date {
+    font-size: 0.78rem;
+    color: #9ca3af;
+  }
+
+  .blog-card-title {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+    line-height: 1.3;
+  }
+
+  .blog-card-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .blog-card-title a:hover {
+    color: #1d4ed8;
+  }
+
+  .blog-card-desc {
+    margin: 0 0 1rem;
+    color: #4b5563;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .blog-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+  }
+
+  .blog-author {
+    color: #6b7280;
+  }
+
+  .blog-read-more {
+    color: #1d4ed8;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .blog-read-more:hover {
+    color: #f97316;
+  }
+
+  @media (max-width: 600px) {
+    .blog-card {
+      grid-template-columns: 1fr;
+    }
+
+    .blog-card-img-wrap {
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    .blog-card-body {
+      padding: 1rem;
+    }
+
+    .blog-card-title {
+      font-size: 1rem;
+    }
+  }
+</style>

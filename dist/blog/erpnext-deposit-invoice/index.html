@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Deposit Invoicing for ERPNext | Ecosoft Blog</title><meta name="description" content="How Ecosoft's Deposit Invoicing solution solves the Thai tax compliance problem with advance payments in ERPNext — with a practical worked example."><link rel="stylesheet" href="/styles/global.css"><style>.post-wrap:where(.astro-4sn4zg3r){padding-block:3rem 4rem}.back-link:where(.astro-4sn4zg3r){display:inline-block;font-size:.85rem;color:#1d4ed8;margin-bottom:2rem;text-decoration:none}.back-link:where(.astro-4sn4zg3r):hover{color:#f97316}.post-header:where(.astro-4sn4zg3r){max-width:44rem;margin-bottom:2.5rem;padding-bottom:2rem;border-bottom:1px solid #dbeafe}.post-meta:where(.astro-4sn4zg3r){display:flex;flex-wrap:wrap;align-items:center;gap:.75rem;margin-bottom:1rem;font-size:.82rem}.blog-category:where(.astro-4sn4zg3r){font-size:.68rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#f97316}.post-date:where(.astro-4sn4zg3r),.post-author:where(.astro-4sn4zg3r){color:#9ca3af}.post-title:where(.astro-4sn4zg3r){font-size:clamp(1.7rem,3vw,2.4rem);letter-spacing:-.03em;margin:0 0 .75rem;color:#0f172a;line-height:1.15}.post-description:where(.astro-4sn4zg3r){margin:0 0 1rem;font-size:1rem;color:#4b5563;line-height:1.6}.post-tags:where(.astro-4sn4zg3r){display:flex;flex-wrap:wrap;gap:.4rem}.post-tag:where(.astro-4sn4zg3r){font-size:.72rem;color:#1d4ed8;background:#eff6ff;border:1px solid #bfdbfe;border-radius:999px;padding:.2rem .6rem}.post-body:where(.astro-4sn4zg3r){max-width:44rem;font-size:.97rem;line-height:1.8;color:#1f2937}.post-body:where(.astro-4sn4zg3r) h2{font-size:1.35rem;letter-spacing:-.02em;color:#0f172a;margin:2rem 0 .6rem}.post-body:where(.astro-4sn4zg3r) h3{font-size:1.1rem;color:#0f172a;margin:1.5rem 0 .4rem}.post-body:where(.astro-4sn4zg3r) p{margin:0 0 1rem}.post-body:where(.astro-4sn4zg3r) ul,.post-body:where(.astro-4sn4zg3r) ol{margin:0 0 1rem;padding-left:1.4rem}.post-body:where(.astro-4sn4zg3r) li{margin-bottom:.3rem}.post-body:where(.astro-4sn4zg3r) blockquote{border-left:3px solid #f97316;margin:1.5rem 0;padding:.75rem 1.2rem;background:#fffbeb;border-radius:0 .5rem .5rem 0;font-style:italic;color:#374151}.post-body:where(.astro-4sn4zg3r) blockquote p{margin:0 0 .3rem}.post-body:where(.astro-4sn4zg3r) table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.9rem}.post-body:where(.astro-4sn4zg3r) th{background:#eff6ff;padding:.5rem .8rem;text-align:left;font-weight:600;border:1px solid #dbeafe}.post-body:where(.astro-4sn4zg3r) td{padding:.5rem .8rem;border:1px solid #e5e7eb}.post-body:where(.astro-4sn4zg3r) strong{color:#0f172a}.post-body:where(.astro-4sn4zg3r) code{background:#f1f5f9;padding:.15rem .4rem;border-radius:.3rem;font-size:.88em}.post-cover:where(.astro-4sn4zg3r){max-width:44rem;margin-bottom:2rem;border-radius:.9rem;overflow:hidden;border:1px solid #dbeafe}.post-cover-img:where(.astro-4sn4zg3r){width:100%;max-height:360px;object-fit:cover;display:block}.post-footer:where(.astro-4sn4zg3r){max-width:44rem;margin-top:3rem;padding-top:2rem;border-top:1px solid #dbeafe}
+</style></head> <body> <header class="site-header"> <div class="container header-inner"> <a href="/" class="logo"> <span class="logo-mark">E</span> <span class="logo-text">
+Ecosoft
+<span class="logo-sub">Open Source ERP</span> </span> </a> <nav class="main-nav"> <a href="#about">About</a> <a href="#services">Services</a> <a href="#methodology">Approach</a> <a href="#testimonials">Customers</a> <a href="/blog">Blog</a> <a href="#contact" class="nav-cta">Contact</a> </nav> </div> </header> <main>  <article class="post-wrap astro-4sn4zg3r"> <div class="container astro-4sn4zg3r"> <a href="/blog" class="back-link astro-4sn4zg3r">← Back to Blog</a> <header class="post-header astro-4sn4zg3r"> <div class="post-meta astro-4sn4zg3r"> <span class="blog-category astro-4sn4zg3r">Accounting</span> <span class="post-date astro-4sn4zg3r">14 April 2025</span> <span class="post-author astro-4sn4zg3r">By Kitti U.</span> </div> <h1 class="post-title astro-4sn4zg3r">Deposit Invoicing for ERPNext</h1> <p class="post-description astro-4sn4zg3r">How Ecosoft&#39;s Deposit Invoicing solution solves the Thai tax compliance problem with advance payments in ERPNext — with a practical worked example.</p> <div class="post-tags astro-4sn4zg3r"> <span class="post-tag astro-4sn4zg3r">#erpnext</span><span class="post-tag astro-4sn4zg3r">#accounting</span><span class="post-tag astro-4sn4zg3r">#thai-tax</span><span class="post-tag astro-4sn4zg3r">#deposit</span> </div> </header> <div class="post-cover astro-4sn4zg3r"> <img src="/images/blog/erpnext-deposit-invoice.png" alt="Deposit Invoicing for ERPNext" class="post-cover-img astro-4sn4zg3r"> </div> <div class="post-body astro-4sn4zg3r"> <p>Thai business practices commonly involve advance deposits (เงินมัดจำ) — a customer pays a percentage upfront before goods are delivered. ERPNext supports advance payments natively, but with a tax compliance gap that matters in Thailand.</p>
+<h2 id="the-problem-with-standard-advance-payments">The Problem with Standard Advance Payments</h2>
+<p>ERPNext’s existing advance payment feature allows prepayment without issuing an invoice. In Thailand, this creates a compliance issue: <strong>advance payments must correspond to proper tax invoices</strong>.</p>
+<p>The Revenue Department requires that when a deposit is received, a tax invoice is issued at that moment — not deferred until final delivery. Standard ERPNext does not handle this correctly out of the box.</p>
+<h2 id="the-deposit-invoicing-solution">The Deposit Invoicing Solution</h2>
+<p>Ecosoft’s Deposit Invoicing module closes this gap by:</p>
+<ol>
+<li><strong>Creating separate deposit invoices</strong> that properly record tax obligations when payments are received</li>
+<li><strong>Applying credits proportionally</strong> to subsequent invoices as goods are delivered in installments</li>
+<li><strong>Supporting both purchase and sales cycles</strong> with the same mechanism</li>
+</ol>
+<h2 id="system-setup">System Setup</h2>
+<p>Three configuration steps are required:</p>
+<ol>
+<li><strong>Mark items as deposit items</strong> in the Item master</li>
+<li><strong>Configure default accounting accounts</strong> for deposit transactions (deferred revenue / advance receipts)</li>
+<li><strong>Enable negative rates in sales settings</strong> to handle deposit deductions on subsequent invoices</li>
+</ol>
+<h2 id="practical-example-10-computer-purchase">Practical Example: 10-Computer Purchase</h2>
+<p>A customer orders 10 computers at 10,000 THB each (100,000 THB + 7% VAT = 107,000 THB total).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Step</th><th>Amount</th><th>Tax Invoice</th></tr></thead><tbody><tr><td>30% deposit received</td><td>30,000 THB + VAT</td><td>Issued immediately</td></tr><tr><td>Delivery 1 (5 computers)</td><td>50,000 THB − 15,000 deposit credit</td><td>Issued on delivery</td></tr><tr><td>Delivery 2 (5 computers)</td><td>50,000 THB − 15,000 deposit credit</td><td>Issued on delivery</td></tr><tr><td><strong>Total</strong></td><td><strong>107,000 THB</strong></td><td>Fully reconciled</td></tr></tbody></table>
+<p>The deposit is correctly deducted across installment invoices, with proper tax allocation at each stage.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li>Supports included and excluded VAT scenarios</li>
+<li>Flexible deposit percentage calculations</li>
+<li>Multi-order invoice consolidation</li>
+<li>Full audit trail from deposit to final settlement</li>
+</ul>
+<p>The module is available as an open-source contribution — consistent with Ecosoft’s commitment to the OCA community and the principle that Thai businesses should own their compliance tools, not pay for them perpetually.</p> </div> <footer class="post-footer astro-4sn4zg3r"> <a href="/blog" class="btn btn-outline astro-4sn4zg3r">← Back to Blog</a> </footer> </div> </article>  </main> <footer class="site-footer"> <div class="container footer-grid"> <div> <div class="footer-logo"> <span class="logo-mark">E</span> <span class="logo-text">
+Ecosoft
+<span class="logo-sub">Open Source ERP</span> </span> </div> <p class="footer-text">
+Specialized in optimizing business processes with 100% open source software.
+            Consulting, implementation, migration, training, and support.
+</p> </div> <div> <h3 class="footer-heading">Head Office</h3> <p class="footer-text">
+459/132 Suksawat Rd.<br>
+Ratchaburana, Bangkok Thailand 10140
+</p> <p class="footer-text">
+Tel: +66 81 841 7480<br>
+Email: sales@ecosoft.co.th
+</p> </div> <div> <h3 class="footer-heading">Quick Links</h3> <ul class="footer-links"> <li><a href="#services">Services</a></li> <li><a href="#methodology">Our Approach</a></li> <li><a href="#testimonials">Customers</a></li> <li><a href="/blog">Blog</a></li> <li><a href="#contact">Contact Us</a></li> </ul> </div> </div> <div class="footer-bottom"> <div class="container footer-bottom-inner"> <span>© 2026 Ecosoft Co., Ltd.</span> <span>Designed & built with Astro.</span> </div> </div> </footer> </body></html> 

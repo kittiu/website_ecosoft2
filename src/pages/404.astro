@@ -1,0 +1,48 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page Not Found | Ecosoft"
+  description="The page you are looking for does not exist."
+>
+  <section class="not-found">
+    <div class="container">
+      <p class="eyebrow">404</p>
+      <h1>Page not found</h1>
+      <p class="not-found-lead">
+        The page you are looking for doesn't exist or has been moved.
+      </p>
+      <div class="not-found-actions">
+        <a href="/" class="btn btn-primary">Go to homepage</a>
+        <a href="/blog" class="btn btn-outline">Visit blog</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    padding-block: 6rem 8rem;
+    text-align: center;
+  }
+
+  .not-found h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: -0.03em;
+    margin: 0 0 1rem;
+  }
+
+  .not-found-lead {
+    color: var(--text-muted);
+    max-width: 30rem;
+    margin: 0 auto 2rem;
+  }
+
+  .not-found-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>

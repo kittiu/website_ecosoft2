@@ -1,0 +1,566 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="ERPNext | Ecosoft — Open Source ERP Solutions"
+  description="ERPNext: Built for Speed. Designed for Scale. Enterprise-grade open source ERP with zero license fees. Consulting, implementation, and support by Ecosoft."
+>
+  <!-- HERO -->
+  <section class="erpnext-hero">
+    <div class="container erpnext-hero-inner">
+      <div class="erpnext-hero-copy">
+        <p class="eyebrow">100% Open Source · Zero License Fees</p>
+        <h1>ERPNext: Built for Speed.<br />Designed for Scale.</h1>
+        <p class="erpnext-hero-lead">
+          The most agile, mobile-friendly, and powerful open-source ERP on the planet. ERPNext gives
+          you enterprise-grade functionality without the enterprise price tag. Customize it, scale it,
+          and run your entire business your way—with zero license fees.
+        </p>
+        <div class="erpnext-hero-actions">
+          <a href="/#contact" class="btn btn-primary">Talk to us</a>
+          <a href="#modules" class="btn btn-outline">Explore modules</a>
+        </div>
+      </div>
+      <div class="product-hero-logo">
+        <img src="/images/erpnext-logo.png" alt="ERPNext" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE HIGHLIGHTS -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow">Capabilities</p>
+        <h2>What Makes it Epic?</h2>
+      </header>
+      <div class="cards-grid erpnext-features-grid">
+        {[
+          { icon: "🔐", label: "Granular User Roles & Access" },
+          { icon: "✅", label: "Multi-Level Approvals" },
+          { icon: "🔌", label: "API-First Architecture" },
+          { icon: "📊", label: "Custom Reports" },
+          { icon: "🌍", label: "Multi-Currency & Multi-Language" },
+          { icon: "🏢", label: "Multi-Subsidiary Handling" },
+          { icon: "📁", label: "Document Management" },
+          { icon: "⚙️", label: "Workflow Automation" },
+        ].map((f) => (
+          <div class="info-card erpnext-feature-card">
+            <span class="erpnext-feature-icon">{f.icon}</span>
+            <p>{f.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE MODULES -->
+  <section id="modules" class="section section-alt">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow">Modules</p>
+        <h2>Key Modules That Mean Business</h2>
+      </header>
+      <div class="cards-grid erpnext-modules-grid">
+        {[
+          {
+            icon: "💼",
+            name: "Sales",
+            desc: "Automates the entire order-to-cash process while providing real-time insights to boost sales efficiency and growth.",
+          },
+          {
+            icon: "🛒",
+            name: "Procurement / Buying",
+            desc: "Streamlines purchasing by automating supplier management, purchase orders, and material requests for cost-effective procurement.",
+          },
+          {
+            icon: "🤝",
+            name: "CRM",
+            desc: "Handles lead management, opportunity tracking, and customer interactions, enhancing sales efficiency and fostering stronger client relationships.",
+          },
+          {
+            icon: "📒",
+            name: "Accounting",
+            desc: "Streamlines financial management by integrating transactions across sales, purchases, and inventory with real-time financial insights.",
+          },
+          {
+            icon: "📦",
+            name: "Inventory Management",
+            desc: "Stock control with real-time tracking, automated replenishment, and comprehensive reporting for optimal inventory levels.",
+          },
+          {
+            icon: "🏭",
+            name: "Manufacturing",
+            desc: "Integrates material planning, work orders, and quality control—enhancing efficiency and reducing costs.",
+          },
+          {
+            icon: "👥",
+            name: "HR Management (HRMS)",
+            desc: "Simplifies recruitment, payroll, attendance, and appraisals—bringing all workforce management into one seamless system.",
+          },
+          {
+            icon: "🏗️",
+            name: "Asset Management",
+            desc: "Handles the entire asset lifecycle — from acquisition to disposal — enhancing tracking, maintenance, and financial oversight.",
+          },
+          {
+            icon: "📋",
+            name: "Project Management",
+            desc: "Integrates tasks, timelines, resources, and budgets into a unified system for end-to-end project planning and execution.",
+          },
+        ].map((m) => (
+          <div class="info-card">
+            <span class="erpnext-module-icon">{m.icon}</span>
+            <h3>{m.name}</h3>
+            <p>{m.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- WEBSITE & E-COMMERCE -->
+  <section class="section erpnext-ecom-section">
+    <div class="container erpnext-ecom-inner">
+      <div>
+        <p class="eyebrow">E-Commerce</p>
+        <h2>Website & E-Commerce Integration</h2>
+        <p>
+          ERPNext centralizes your website and e-commerce functionalities within the system. It
+          ensures real-time synchronization between your online store and backend operations—so
+          inventory, orders, and customer data are always in sync.
+        </p>
+        <a href="/#contact" class="btn btn-primary">Get started</a>
+      </div>
+      <div class="erpnext-ecom-badges">
+        <span>🛍️ Online Store</span>
+        <span>🔄 Real-time Sync</span>
+        <span>💳 Payment Gateways</span>
+        <span>📦 Auto Inventory Update</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 KEY ADVANTAGES -->
+  <section class="section section-alt">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow">Why ERPNext</p>
+        <h2>8 Reasons ERPNext is the Best Choice</h2>
+      </header>
+      <div class="cards-grid erpnext-advantages-grid">
+        {[
+          {
+            num: "01",
+            title: "Open Source & Pocket Friendly",
+            desc: "No license fees. No vendor lock-in. ERPNext is fully open source, giving you total freedom and full control. Unlike SAP, it won't break the bank.",
+          },
+          {
+            num: "02",
+            title: "Built on Frappe Framework",
+            desc: "Powered by the robust Frappe Framework — a modern, low-code web framework in Python and JavaScript. Industry-rich, API-first, with 130+ integrations.",
+          },
+          {
+            num: "03",
+            title: "Easily Customizable & Scalable",
+            desc: "Every business is unique. From custom workflows to handling large volumes of data, ERPNext is flexible enough for growing midsize companies.",
+          },
+          {
+            num: "04",
+            title: "User-Friendly Interface",
+            desc: "ERPNext offers a clean, intuitive interface that anyone can use — with minimal training. An ERP is only as good as its usability.",
+          },
+          {
+            num: "05",
+            title: "Integrated CRM & Business Functions",
+            desc: "Manage sales, leads, support, accounting, inventory, HR, and payroll — all in one platform. No more juggling multiple tools.",
+          },
+          {
+            num: "06",
+            title: "Integration Capabilities",
+            desc: "Need to plug into e-commerce, payment gateways, or other tools? ERPNext makes it seamless with smooth integration options.",
+          },
+          {
+            num: "07",
+            title: "Cloud Hosting & Effortless Scaling",
+            desc: "Whether you're a startup or a scaling enterprise, ERPNext grows with you. Hosted on the cloud by Frappe for maximum flexibility.",
+          },
+          {
+            num: "08",
+            title: "Active Community & Local Support",
+            desc: "Backed by a thriving global community of developers and functional experts — expect rapid updates, bug fixes, and continuous innovation.",
+          },
+        ].map((a) => (
+          <div class="info-card erpnext-advantage-card">
+            <span class="erpnext-advantage-num">{a.num}</span>
+            <h3>{a.title}</h3>
+            <p>{a.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing" class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="eyebrow">Pricing</p>
+        <h2>ERPNext implementation packages.</h2>
+        <p>Fixed-scope packages for straightforward implementations. Complex organisations are covered by our Enterprise tier.</p>
+      </header>
+
+      <div class="pricing-tabs">
+        <button class="pricing-tab pricing-tab--active" data-tab="standard">Standard</button>
+        <button class="pricing-tab" data-tab="enterprise">Enterprise</button>
+      </div>
+
+      <div class="pricing-panel" data-panel="standard">
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="pricing-plan">HRMS / Payroll Only</h3>
+              <div class="pricing-price">
+                <span class="pricing-amount">฿250,000</span>
+              </div>
+              <p class="pricing-scope">Frappe HR</p>
+            </div>
+            <ul class="pricing-features">
+              <li>30 consulting hours</li>
+              <li>30-day project validity</li>
+              <li>HR &amp; Payroll modules</li>
+              <li>Thai payroll compliance</li>
+            </ul>
+            <a href="/#contact" class="btn btn-outline pricing-cta">Get started</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="pricing-plan">Core ERPNext</h3>
+              <div class="pricing-price">
+                <span class="pricing-amount">฿300,000</span>
+              </div>
+              <p class="pricing-scope">Accounting · Selling · Buying · Inventory</p>
+            </div>
+            <ul class="pricing-features">
+              <li>40 consulting hours</li>
+              <li>30-day project validity</li>
+              <li>Thai accounting &amp; tax compliance</li>
+              <li>Full source code delivery</li>
+            </ul>
+            <a href="/#contact" class="btn btn-outline pricing-cta">Get started</a>
+          </div>
+
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-badge">Most Popular</div>
+            <div class="pricing-card-header">
+              <h3 class="pricing-plan">Core + Manufacturing</h3>
+              <div class="pricing-price">
+                <span class="pricing-amount">฿500,000</span>
+              </div>
+              <p class="pricing-scope">Above + Manufacturing</p>
+            </div>
+            <ul class="pricing-features">
+              <li>70 consulting hours</li>
+              <li>60-day project validity</li>
+              <li>Full core ERP scope</li>
+              <li>Production &amp; BOM management</li>
+              <li>Thai accounting &amp; tax compliance</li>
+              <li>Full source code delivery</li>
+            </ul>
+            <a href="/#contact" class="btn btn-primary pricing-cta">Get started</a>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="pricing-plan">Core + Manufacturing + HRMS</h3>
+              <div class="pricing-price">
+                <span class="pricing-amount">฿750,000</span>
+              </div>
+              <p class="pricing-scope">Above + Frappe HR</p>
+            </div>
+            <ul class="pricing-features">
+              <li>100 consulting hours</li>
+              <li>90-day project validity</li>
+              <li>Full core + manufacturing scope</li>
+              <li>HR &amp; Payroll modules</li>
+              <li>Thai payroll compliance</li>
+              <li>Full source code delivery</li>
+            </ul>
+            <a href="/#contact" class="btn btn-outline pricing-cta">Get started</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-panel pricing-panel--hidden" data-panel="enterprise">
+        <div class="pricing-grid pricing-grid--centered">
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-card-header">
+              <h3 class="pricing-plan">Enterprise</h3>
+              <div class="pricing-price">
+                <span class="pricing-amount">฿1,500,000+</span>
+              </div>
+              <p class="pricing-scope">Complex Org · Custom Scope · Accounting Advisory</p>
+            </div>
+            <ul class="pricing-features">
+              <li>Unlimited consulting hours</li>
+              <li>90–270 day project validity</li>
+              <li>Complex org structures &amp; multi-entity</li>
+              <li>Deep customisation &amp; custom modules</li>
+              <li>Government compliance workflows</li>
+              <li>Dedicated accounting advisory</li>
+              <li>Full source code delivery</li>
+            </ul>
+            <a href="/#contact" class="btn btn-primary pricing-cta">Talk to us</a>
+          </div>
+        </div>
+        <p class="pricing-enterprise-note">Pricing ranges from ฿1,500,000 to ฿3,000,000+ depending on scope. Contact us for a tailored quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRATIONS -->
+  <section class="section section-alt">
+    <div class="container erpnext-integrations">
+      <header class="section-header">
+        <p class="eyebrow">Integrations</p>
+        <h2>Connect Anything. Sync Everything.</h2>
+        <p>
+          From e-commerce platforms to payment gateways, ERPNext integrates effortlessly with 130+
+          tools — so your entire tech stack works in perfect harmony.
+        </p>
+      </header>
+      <div class="erpnext-integration-image">
+        <img src="/images/erpnext_integrations.webp" alt="ERPNext integrations including PayPal, Stripe, Shopify, Google, AWS, Slack and more" />
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section section-accent erpnext-cta">
+    <div class="container">
+      <h2>Ready for an ERP That Actually Works for You?</h2>
+      <p>
+        No licenses. No limits. Just powerful, flexible, all-in-one business management — tailored
+        to your growth. It's free, forever. Let Ecosoft guide your implementation.
+      </p>
+      <a href="/#contact" class="btn btn-primary">Talk to our team</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  (function () {
+    const tabs = document.querySelectorAll('.pricing-tab');
+    const panels = document.querySelectorAll('.pricing-panel');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('pricing-tab--active'));
+        panels.forEach(p => p.classList.add('pricing-panel--hidden'));
+        tab.classList.add('pricing-tab--active');
+        document.querySelector(`[data-panel="${(tab as HTMLElement).dataset.tab}"]`)
+          ?.classList.remove('pricing-panel--hidden');
+      });
+    });
+  })();
+</script>
+
+<style>
+  /* Hero */
+  .erpnext-hero {
+    padding-block: 5rem;
+    background: linear-gradient(
+      135deg,
+      #f0f0ff 0%,
+      #dddeff 25%,
+      #c5c7ff 50%,
+      #dddeff 75%,
+      #f0f0ff 100%
+    );
+  }
+
+  html[data-theme="dark"] .erpnext-hero {
+    background: linear-gradient(
+      135deg,
+      #0d0d2b 0%,
+      #16166b 25%,
+      #1e1e99 50%,
+      #16166b 75%,
+      #0d0d2b 100%
+    );
+  }
+
+  .erpnext-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    letter-spacing: -0.04em;
+    margin: 0.5rem 0 1rem;
+    color: var(--text);
+  }
+
+  .erpnext-hero-lead {
+    max-width: 42rem;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+
+  .erpnext-hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* Features grid */
+  .erpnext-features-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .erpnext-feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .erpnext-feature-card p {
+    margin: 0;
+    font-weight: 600;
+    color: var(--text);
+    font-size: 0.88rem;
+  }
+
+  .erpnext-feature-icon {
+    font-size: 1.5rem;
+  }
+
+  /* Modules grid */
+  .erpnext-modules-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .erpnext-module-icon {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* E-commerce */
+  .erpnext-ecom-section {
+    background: var(--bg);
+  }
+
+  .erpnext-ecom-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .erpnext-ecom-inner h2 {
+    font-size: 1.7rem;
+    letter-spacing: -0.03em;
+    margin: 0.4rem 0 1rem;
+    color: var(--text);
+  }
+
+  .erpnext-ecom-inner p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  .erpnext-ecom-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .erpnext-ecom-badges span {
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-blue);
+    background: var(--bg-card-blue);
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  /* Advantages */
+  .erpnext-advantages-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .erpnext-advantage-card {
+    position: relative;
+  }
+
+  .erpnext-advantage-num {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Integrations */
+  .erpnext-integration-image {
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    border: 1px solid var(--border-blue);
+    background: var(--bg-card);
+  }
+
+  .erpnext-integration-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  html[data-theme="dark"] .erpnext-integration-image img {
+    filter: brightness(0.85) contrast(1.1);
+  }
+
+  /* CTA */
+  .erpnext-cta {
+    text-align: center;
+  }
+
+  .erpnext-cta h2 {
+    font-size: 1.9rem;
+    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+  }
+
+  .erpnext-cta p {
+    max-width: 38rem;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .erpnext-features-grid,
+    .erpnext-advantages-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .erpnext-modules-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .erpnext-ecom-inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .erpnext-features-grid,
+    .erpnext-modules-grid,
+    .erpnext-advantages-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

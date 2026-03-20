@@ -1,0 +1,192 @@
+---
+const { title = "Ecosoft | Open Source ERP Solutions", description = "Ecosoft is specialized in optimizing business processes with 100% open source software — Odoo & ERPNext consulting, implementation, migration, training, and support." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="/" class="logo">
+          <img src="/images/ecosoft-logo.png" alt="Ecosoft – Your ERP Partner" class="logo-img" />
+        </a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+          <a href="/#about">About</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Products ▾</button>
+            <div class="nav-dropdown-menu">
+              <a href="/erpnext">ERPNext</a>
+              <a href="/odoo">Odoo</a>
+            </div>
+          </div>
+          <a href="/#services">Services</a>
+          <a href="/#methodology">Approach</a>
+          <a href="/#testimonials">Customers</a>
+          <a href="/blog">Blog</a>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+          <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">TH</button>
+          <a href="/#contact" class="nav-cta">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-logo">
+            <img src="/images/ecosoft-logo.png" alt="Ecosoft – Your ERP Partner" class="logo-img logo-img--footer" />
+          </div>
+          <p class="footer-text">
+            Specialized in optimizing business processes with 100% open source software.
+            Consulting, implementation, migration, training, and support.
+          </p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Head Office</h3>
+          <p class="footer-text">
+            459/132 Suksawat Rd.<br />
+            Ratchaburana, Bangkok Thailand 10140
+          </p>
+          <p class="footer-text">
+            Tel: +66 81 841 7480<br />
+            Email: sales@ecosoft.co.th
+          </p>
+        </div>
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#methodology">Our Approach</a></li>
+            <li><a href="/#testimonials">Customers</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/#contact">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <span>© {new Date().getFullYear()} Ecosoft Co., Ltd.</span>
+          <span>Designed & built with Astro.</span>
+        </div>
+      </div>
+    </footer>
+    <script is:inline>
+      // ── Language toggle (Google Translate URL proxy) ──────
+      (function () {
+        var btn = document.getElementById('lang-toggle');
+        if (!btn) return;
+
+        function isTranslatedDomain(hostname) {
+          return hostname.endsWith('.translate.goog');
+        }
+        function buildTranslateUrl(pageUrl) {
+          return 'https://translate.google.com/translate?sl=en&tl=th&u=' + encodeURIComponent(pageUrl);
+        }
+        function buildOriginalUrl(protocol, hostname, pathname, search) {
+          var sub = hostname.replace('.translate.goog', '');
+          var parts = sub.split('-');
+          var port = /^\d+$/.test(parts[parts.length - 1]) ? ':' + parts.pop() : '';
+          var host = parts.join('.');
+          var qs = search
+            .replace(/[?&]_x_tr_\w+=[^&]*/g, '')
+            .replace(/^&/, '?')
+            .replace(/\?$/, '');
+          return protocol + '//' + host + port + pathname + qs;
+        }
+
+        if (isTranslatedDomain(location.hostname)) {
+          btn.textContent = 'EN';
+          btn.addEventListener('click', function () {
+            location.href = buildOriginalUrl(location.protocol, location.hostname, location.pathname, location.search);
+          });
+        } else {
+          btn.textContent = 'TH';
+          btn.addEventListener('click', function () {
+            location.href = buildTranslateUrl(location.href);
+          });
+        }
+      })();
+
+      // ── Products dropdown ────────────────────────────────
+      (function () {
+        var trigger = document.querySelector('.nav-dropdown-trigger');
+        var dropdown = document.querySelector('.nav-dropdown');
+        if (!trigger || !dropdown) return;
+        trigger.addEventListener('click', function () {
+          var open = dropdown.classList.toggle('nav-dropdown--open');
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        document.addEventListener('click', function (e) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('nav-dropdown--open');
+            trigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+      })();
+
+      // ── Mobile nav hamburger ─────────────────────────────
+      (function () {
+        var btn = document.getElementById('nav-hamburger');
+        var nav = document.getElementById('main-nav');
+        if (!btn || !nav) return;
+        btn.addEventListener('click', function () {
+          var open = nav.classList.toggle('main-nav--open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          btn.classList.toggle('nav-hamburger--open', open);
+        });
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('main-nav--open');
+            btn.setAttribute('aria-expanded', 'false');
+            btn.classList.remove('nav-hamburger--open');
+          });
+        });
+      })();
+
+      // ── Dark mode toggle ──────────────────────────────────
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+
+        function apply(t) {
+          document.documentElement.setAttribute('data-theme', t);
+          if (btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+        }
+
+        apply(theme);
+
+        if (btn) {
+          btn.addEventListener('click', function () {
+            var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            apply(next);
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,233 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from "@layouts/BaseLayout.astro";
+import { formatDate } from '../../utils/formatDate';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout title={`${post.data.title} | Ecosoft Blog`} description={post.data.description}>
+  <article class="post-wrap">
+    <div class="container">
+      <a href="/blog" class="back-link">← Back to Blog</a>
+
+      <header class="post-header">
+        <div class="post-meta">
+          <span class="blog-category">{post.data.category}</span>
+          <span class="post-date">{formatDate(post.data.date)}</span>
+          <span class="post-author">By {post.data.author}</span>
+        </div>
+        <h1 class="post-title">{post.data.title}</h1>
+        <p class="post-description">{post.data.description}</p>
+        {post.data.tags && (
+          <div class="post-tags">
+            {post.data.tags.map((tag) => (
+              <span class="post-tag">#{tag}</span>
+            ))}
+          </div>
+        )}
+      </header>
+
+      {post.data.image && (
+        <div class="post-cover">
+          <img src={post.data.image} alt={post.data.title} class="post-cover-img" />
+        </div>
+      )}
+
+      <div class="post-body">
+        <Content />
+      </div>
+
+      <footer class="post-footer">
+        <a href="/blog" class="btn btn-outline">← Back to Blog</a>
+      </footer>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .post-wrap {
+    padding-block: 3rem 4rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #1d4ed8;
+    margin-bottom: 2rem;
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    color: #f97316;
+  }
+
+  .post-header {
+    max-width: 44rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #dbeafe;
+  }
+
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.82rem;
+  }
+
+  .blog-category {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #f97316;
+  }
+
+  .post-date,
+  .post-author {
+    color: #9ca3af;
+  }
+
+  .post-title {
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    letter-spacing: -0.03em;
+    margin: 0 0 0.75rem;
+    color: #0f172a;
+    line-height: 1.15;
+  }
+
+  .post-description {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: #4b5563;
+    line-height: 1.6;
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .post-tag {
+    font-size: 0.72rem;
+    color: #1d4ed8;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .post-body {
+    max-width: 44rem;
+    font-size: 0.97rem;
+    line-height: 1.8;
+    color: #1f2937;
+  }
+
+  .post-body :global(h2) {
+    font-size: 1.35rem;
+    letter-spacing: -0.02em;
+    color: #0f172a;
+    margin: 2rem 0 0.6rem;
+  }
+
+  .post-body :global(h3) {
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin: 1.5rem 0 0.4rem;
+  }
+
+  .post-body :global(p) {
+    margin: 0 0 1rem;
+  }
+
+  .post-body :global(ul),
+  .post-body :global(ol) {
+    margin: 0 0 1rem;
+    padding-left: 1.4rem;
+  }
+
+  .post-body :global(li) {
+    margin-bottom: 0.3rem;
+  }
+
+  .post-body :global(blockquote) {
+    border-left: 3px solid #f97316;
+    margin: 1.5rem 0;
+    padding: 0.75rem 1.2rem;
+    background: #fffbeb;
+    border-radius: 0 0.5rem 0.5rem 0;
+    font-style: italic;
+    color: #374151;
+  }
+
+  .post-body :global(blockquote p) {
+    margin: 0 0 0.3rem;
+  }
+
+  .post-body :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+    font-size: 0.9rem;
+  }
+
+  .post-body :global(th) {
+    background: #eff6ff;
+    padding: 0.5rem 0.8rem;
+    text-align: left;
+    font-weight: 600;
+    border: 1px solid #dbeafe;
+  }
+
+  .post-body :global(td) {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #e5e7eb;
+  }
+
+  .post-body :global(strong) {
+    color: #0f172a;
+  }
+
+  .post-body :global(code) {
+    background: #f1f5f9;
+    padding: 0.15rem 0.4rem;
+    border-radius: 0.3rem;
+    font-size: 0.88em;
+  }
+
+  .post-cover {
+    max-width: 44rem;
+    margin-bottom: 2rem;
+    border-radius: 0.9rem;
+    overflow: hidden;
+    border: 1px solid #dbeafe;
+  }
+
+  .post-cover-img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .post-footer {
+    max-width: 44rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #dbeafe;
+  }
+</style>
