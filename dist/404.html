@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page Not Found | Ecosoft</title><meta name="description" content="The page you are looking for does not exist."><link rel="canonical" href="https://ecosoft.co.th/404/"><meta property="og:title" content="Page Not Found | Ecosoft"><meta property="og:description" content="The page you are looking for does not exist."><meta property="og:type" content="website"><meta property="og:url" content="https://ecosoft.co.th/404/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Page Not Found | Ecosoft"><meta name="twitter:description" content="The page you are looking for does not exist."><link rel="icon" type="image/png" href="/favicon.png"><link rel="stylesheet" href="/styles/global.css"><style>.not-found:where(.astro-zetdm5md){padding-block:6rem 8rem;text-align:center}.not-found:where(.astro-zetdm5md) h1:where(.astro-zetdm5md){font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.03em;margin:0 0 1rem}.not-found-lead:where(.astro-zetdm5md){color:var(--text-muted);max-width:30rem;margin:0 auto 2rem}.not-found-actions:where(.astro-zetdm5md){display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+</style></head> <body> <header class="site-header"> <div class="container header-inner"> <a href="/" class="logo"> <img src="/images/ecosoft-logo.png" alt="Ecosoft – Your ERP Partner" class="logo-img"> </a> <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false"> <span></span><span></span><span></span> </button> <nav class="main-nav" id="main-nav"> <a href="/about">About</a> <div class="nav-dropdown"> <button class="nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">Products ▾</button> <div class="nav-dropdown-menu"> <a href="/erpnext">ERPNext</a> <a href="/odoo">Odoo</a> </div> </div> <a href="/#services">Services</a> <a href="/#methodology">Approach</a> <a href="/#testimonials">Customers</a> <a href="/blog">Blog</a> <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">🌙</button> <button class="lang-toggle" id="lang-toggle" aria-label="Toggle language">TH</button> <a href="/#contact" class="nav-cta">Contact</a> </nav> </div> </header> <main>  <section class="not-found astro-zetdm5md"> <div class="container astro-zetdm5md"> <p class="eyebrow astro-zetdm5md">404</p> <h1 class="astro-zetdm5md">Page not found</h1> <p class="not-found-lead astro-zetdm5md">
+The page you are looking for doesn't exist or has been moved.
+</p> <div class="not-found-actions astro-zetdm5md"> <a href="/" class="btn btn-primary astro-zetdm5md">Go to homepage</a> <a href="/blog" class="btn btn-outline astro-zetdm5md">Visit blog</a> </div> </div> </section>  </main> <footer class="site-footer"> <div class="container footer-grid"> <div> <div class="footer-logo"> <img src="/images/ecosoft-logo.png" alt="Ecosoft – Your ERP Partner" class="logo-img logo-img--footer"> </div> <p class="footer-text">
+Specialized in optimizing business processes with 100% open source software.
+            Consulting, implementation, migration, training, and support.
+</p> </div> <div> <h3 class="footer-heading">Head Office</h3> <p class="footer-text">
+459/132 Suksawat Rd.<br>
+Ratchaburana, Bangkok Thailand 10140
+</p> <p class="footer-text">
+Tel: +66 81 841 7480<br>
+Email: sales@ecosoft.co.th
+</p> </div> <div> <h3 class="footer-heading">Products</h3> <ul class="footer-links"> <li><a href="/erpnext">ERPNext</a></li> <li><a href="/odoo">Odoo</a></li> </ul> <h3 class="footer-heading footer-heading--spaced">Services</h3> <ul class="footer-links"> <li><a href="/#services">ERP Implementation</a></li> <li><a href="/#services">Migration &amp; Support</a></li> <li><a href="/#services">Thai Gov ERP</a></li> </ul> </div> <div> <h3 class="footer-heading">Company</h3> <ul class="footer-links"> <li><a href="/about">About Us</a></li> <li><a href="/#methodology">Our Approach</a></li> <li><a href="/#testimonials">Customers</a></li> <li><a href="/blog">Blog</a></li> <li><a href="/#contact">Contact Us</a></li> </ul> </div> </div> <div class="footer-bottom"> <div class="container footer-bottom-inner"> <span>© 2026 Ecosoft Co., Ltd. All rights reserved.</span> <span>Open Source ERP Partner — Thailand</span> </div> </div> </footer> <script>
+      // ── Language toggle (Google Translate URL proxy) ──────
+      (function () {
+        var btn = document.getElementById('lang-toggle');
+        if (!btn) return;
+
+        function isTranslatedDomain(hostname) {
+          return hostname.endsWith('.translate.goog');
+        }
+        function buildTranslateUrl(pageUrl) {
+          return 'https://translate.google.com/translate?sl=en&tl=th&u=' + encodeURIComponent(pageUrl);
+        }
+        function buildOriginalUrl(protocol, hostname, pathname, search) {
+          var sub = hostname.replace('.translate.goog', '');
+          var parts = sub.split('-');
+          var port = /^\d+$/.test(parts[parts.length - 1]) ? ':' + parts.pop() : '';
+          var host = parts.join('.');
+          var qs = search
+            .replace(/[?&]_x_tr_\w+=[^&]*/g, '')
+            .replace(/^&/, '?')
+            .replace(/\?$/, '');
+          return protocol + '//' + host + port + pathname + qs;
+        }
+
+        if (isTranslatedDomain(location.hostname)) {
+          btn.textContent = 'EN';
+          btn.addEventListener('click', function () {
+            location.href = buildOriginalUrl(location.protocol, location.hostname, location.pathname, location.search);
+          });
+        } else {
+          btn.textContent = 'TH';
+          btn.addEventListener('click', function () {
+            location.href = buildTranslateUrl(location.href);
+          });
+        }
+      })();
+
+      // ── Products dropdown ────────────────────────────────
+      (function () {
+        var trigger = document.querySelector('.nav-dropdown-trigger');
+        var dropdown = document.querySelector('.nav-dropdown');
+        if (!trigger || !dropdown) return;
+        trigger.addEventListener('click', function () {
+          var open = dropdown.classList.toggle('nav-dropdown--open');
+          trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+        document.addEventListener('click', function (e) {
+          if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('nav-dropdown--open');
+            trigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+      })();
+
+      // ── Mobile nav hamburger ─────────────────────────────
+      (function () {
+        var btn = document.getElementById('nav-hamburger');
+        var nav = document.getElementById('main-nav');
+        if (!btn || !nav) return;
+        btn.addEventListener('click', function () {
+          var open = nav.classList.toggle('main-nav--open');
+          btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+          btn.classList.toggle('nav-hamburger--open', open);
+        });
+        nav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('main-nav--open');
+            btn.setAttribute('aria-expanded', 'false');
+            btn.classList.remove('nav-hamburger--open');
+          });
+        });
+      })();
+
+      // ── Dark mode toggle ──────────────────────────────────
+      (function () {
+        var btn = document.getElementById('theme-toggle');
+        var saved = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = saved || (prefersDark ? 'dark' : 'light');
+
+        function apply(t) {
+          document.documentElement.setAttribute('data-theme', t);
+          if (btn) btn.textContent = t === 'dark' ? '☀️' : '🌙';
+        }
+
+        apply(theme);
+
+        if (btn) {
+          btn.addEventListener('click', function () {
+            var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', next);
+            apply(next);
+          });
+        }
+      })();
+    </script> </body> </html> 

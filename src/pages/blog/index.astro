@@ -9,22 +9,28 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <BaseLayout
-  title="Blog | Ecosoft"
-  description="Insights, case studies, and ERP know-how from the Ecosoft team."
+  title="Blog | Ecosoft — ERP Insights & Case Studies"
+  description="ERP insights, case studies, and open source know-how from the Ecosoft team. Real stories from real implementations across Thailand."
 >
   <section class="blog-hero">
     <div class="container">
-      <p class="eyebrow">Blog</p>
-      <h1>Insights, case studies, and ERP know-how.</h1>
+      <p class="eyebrow">Ecosoft Blog</p>
+      <h1>ERP Insights, Case Studies &amp; Open Source Expertise</h1>
       <p class="blog-hero-lead">
-        Real stories from real implementations, plus practical guides on getting
-        the most from open source ERP.
+        Practical guidance from over a decade of ERP implementations across Thailand —
+        from manufacturing and logistics to government and space technology.
       </p>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
+      {posts.length === 0 && (
+        <div class="blog-empty">
+          <p class="blog-empty-title">No articles published yet.</p>
+          <p class="blog-empty-sub">We'll be sharing ERP insights, case studies, and open source guides soon. <a href="/#contact">Get in touch</a> if you have a question in the meantime.</p>
+        </div>
+      )}
       <div class="blog-list">
         {posts.map((post) => (
           <article class="blog-card">
@@ -58,21 +64,20 @@ const posts = (await getCollection('blog')).sort(
   .blog-hero {
     padding-block: 3.5rem 3rem;
     background:
-      radial-gradient(circle at top left, #dbeafe 0, transparent 60%),
-      radial-gradient(circle at top right, #fee2e2 0, transparent 60%),
-      linear-gradient(to bottom, #ffffff, #eff6ff 40%, #ffffff 70%);
+      radial-gradient(circle at top left, var(--border-blue) 0, transparent 60%),
+      linear-gradient(to bottom, var(--bg) 0%, var(--bg-card-blue) 40%, var(--bg) 70%);
   }
 
   .blog-hero h1 {
     font-size: clamp(1.8rem, 3vw, 2.5rem);
     letter-spacing: -0.03em;
     margin: 0 0 0.75rem;
-    color: #0f172a;
+    color: var(--text);
   }
 
   .blog-hero-lead {
     margin: 0;
-    color: #4b5563;
+    color: var(--text-muted);
     max-width: 36rem;
     font-size: 1rem;
   }
@@ -88,15 +93,15 @@ const posts = (await getCollection('blog')).sort(
     display: grid;
     grid-template-columns: 220px 1fr;
     border-radius: 1.1rem;
-    border: 1px solid #dbeafe;
-    background: radial-gradient(circle at top left, #ffffff, #eff6ff);
-    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.1);
+    border: 1px solid var(--border-blue);
+    background: var(--bg-card);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.07);
     overflow: hidden;
     transition: box-shadow 150ms ease-out;
   }
 
   .blog-card:hover {
-    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.18);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.15);
   }
 
   .blog-card-img-wrap {
@@ -140,14 +145,14 @@ const posts = (await getCollection('blog')).sort(
 
   .blog-date {
     font-size: 0.78rem;
-    color: #9ca3af;
+    color: var(--text-faint);
   }
 
   .blog-card-title {
     margin: 0 0 0.5rem;
     font-size: 1.1rem;
     letter-spacing: -0.02em;
-    color: #0f172a;
+    color: var(--text);
     line-height: 1.3;
   }
 
@@ -162,7 +167,7 @@ const posts = (await getCollection('blog')).sort(
 
   .blog-card-desc {
     margin: 0 0 1rem;
-    color: #4b5563;
+    color: var(--text-muted);
     font-size: 0.88rem;
     line-height: 1.6;
     flex: 1;
@@ -176,7 +181,7 @@ const posts = (await getCollection('blog')).sort(
   }
 
   .blog-author {
-    color: #6b7280;
+    color: var(--text-subtle);
   }
 
   .blog-read-more {
@@ -197,6 +202,29 @@ const posts = (await getCollection('blog')).sort(
     .blog-card-img-wrap {
       height: 180px;
     }
+  }
+
+  .blog-empty {
+    padding: 3rem 0;
+    max-width: 40rem;
+  }
+
+  .blog-empty-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 0.5rem;
+  }
+
+  .blog-empty-sub {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .blog-empty-sub a {
+    color: #1d4ed8;
+    font-weight: 600;
   }
 
   @media (max-width: 360px) {

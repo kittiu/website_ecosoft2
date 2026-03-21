@@ -12,11 +12,12 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     <div class="container about-hero-inner">
       <div class="about-hero-copy">
         <p class="eyebrow">Est. 2013 · Bangkok, Thailand</p>
-        <h1>Built on Code,<br />Driven by Purpose.</h1>
+        <h1>Thailand's Trusted<br />Open Source ERP Partner</h1>
         <p class="about-hero-lead">
-          We believe businesses deserve powerful software without the lock-in, the bloat,
-          or the sky-high license fees. Ecosoft was founded to make enterprise-grade ERP
-          accessible to every organisation — through the power of open source.
+          Thai organisations deserve enterprise-grade ERP without six-figure licensing fees,
+          rigid vendor contracts, or software that ignores local workflows. Ecosoft was
+          founded in 2013 to solve exactly that — and over a decade later, we've helped
+          40+ clients across every major industry prove that open source delivers more.
         </p>
       </div>
       <div class="about-hero-illustration">
@@ -120,22 +121,23 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     <div class="container about-story-grid">
       <div class="about-story-copy">
         <p class="eyebrow">Our Story</p>
-        <h2>From Frustration to Mission</h2>
+        <h2>A Decade of Open Source ERP in Thailand</h2>
         <p>
-          Ecosoft was born out of a simple frustration: why were so many Thai businesses
-          locked into expensive, rigid ERP systems that took years to implement and still
-          didn't fit their needs?
+          When Ecosoft was founded in 2013, most Thai businesses faced a painful choice:
+          pay millions for proprietary ERP that barely fit their processes, or manage
+          operations with spreadsheets. Neither was acceptable.
         </p>
         <p>
           Our founders had spent years in enterprise software consulting and watched
-          organisations pour millions into proprietary platforms — only to fight the software
-          every step of the way. There had to be a better way.
+          organisations pour enormous budgets into SAP and Oracle implementations — only
+          to fight the software at every turn. Open source was the obvious answer, and we
+          committed to it entirely.
         </p>
         <p>
-          In 2013, we bet everything on open source. We partnered with the Odoo and ERPNext
-          ecosystems, contributed to the OCA (Odoo Community Association), and built
-          Thailand-specific modules for tax compliance, accounting, and local business
-          workflows. Today those modules are used by hundreds of organisations worldwide.
+          We partnered with the Odoo and ERPNext ecosystems, joined the OCA (Odoo Community
+          Association), and built Thailand-specific modules for VAT, accounting, and local
+          procurement workflows. Today those modules are used by organisations worldwide —
+          and Ecosoft remains the ERP partner of choice for businesses that expect more.
         </p>
       </div>
       <div class="about-story-timeline">
@@ -182,7 +184,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
           {
             icon: "🇹🇭",
             title: "Built for Thailand",
-            body: "We understand Thai tax law, Thai accounting standards, and Thai business culture — because this is home. Our modules reflect that.",
+            body: "Thai VAT, Withholding Tax, Revenue Department e-Tax invoices, BOI compliance, and the Chart of Accounts your auditors expect — all built in, not bolted on.",
           },
           {
             icon: "🌱",
@@ -215,21 +217,20 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     <div class="container about-oss-inner">
       <div class="about-oss-copy">
         <p class="eyebrow">Why Open Source?</p>
-        <h2>Freedom Is Not a Feature — It's the Foundation</h2>
+        <h2>Own Your System. Control Your Costs.</h2>
         <p>
-          Proprietary ERP vendors charge for every user, every module, every upgrade.
-          They hold your data hostage and make customisation painfully expensive.
-          Open source flips that model entirely.
+          Proprietary ERP vendors charge for every user, every module, and every upgrade.
+          Customisation is expensive. Migrations are painful. And when the vendor raises
+          prices or discontinues a product, you have no choice but to follow.
         </p>
         <p>
-          With Odoo and ERPNext, you own your system. You can customise anything,
-          extend anything, and move your data anywhere. A global community of developers
-          means the software improves every single day — and you benefit from that
-          innovation for free.
+          With Odoo and ERPNext, you own the entire system. Customise anything, extend
+          anything, move your data anywhere. A global developer community means continuous
+          improvement — at no extra cost to you.
         </p>
         <p>
-          We've seen clients cut their total ERP cost by 60–80% compared to SAP or
-          Oracle — while getting <em>more</em> flexibility, not less.
+          Our clients consistently reduce their total ERP cost by <strong>60–80%</strong>
+          compared to SAP or Oracle — while gaining <em>more</em> flexibility, not less.
         </p>
       </div>
       <div class="about-oss-checklist">
@@ -255,13 +256,14 @@ import BaseLayout from "@layouts/BaseLayout.astro";
   <!-- CTA -->
   <section class="section about-cta-section">
     <div class="container about-cta-inner">
-      <h2>Ready to Work Together?</h2>
+      <h2>Let's Discuss Your ERP Project</h2>
       <p>
-        Whether you're exploring ERP for the first time or migrating from a legacy system,
-        we'd love to have an honest conversation about what the right solution looks like for you.
+        Whether you're evaluating ERP for the first time, planning a migration from SAP
+        or Oracle, or looking to extend an existing open source system — we'll give you
+        an honest, expert assessment with no obligation.
       </p>
       <div class="about-cta-actions">
-        <a href="/#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="/#contact" class="btn btn-primary">Request a Free Consultation</a>
         <a href="/#services" class="btn btn-outline">See Our Services</a>
       </div>
     </div>
@@ -272,7 +274,9 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 <style>
   /* ── Hero ── */
   .about-hero {
-    background: var(--bg);
+    background:
+      radial-gradient(circle at top left, var(--border-blue) 0, transparent 55%),
+      linear-gradient(to bottom, var(--bg) 0%, var(--bg-card-blue) 40%, var(--bg) 80%);
     padding: 5rem 0 3rem;
   }
   .about-hero-inner {
@@ -389,9 +393,17 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     padding: 1.75rem;
   }
   .about-value-icon {
-    font-size: 2rem;
-    display: block;
-    margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--bg-card-blue);
+    border: 1px solid var(--border-blue);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    flex-shrink: 0;
   }
   .about-value-card h3 {
     font-size: 1.05rem;

@@ -13,17 +13,34 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         <p class="eyebrow">100% Open Source · Zero License Fees</p>
         <h1>ERPNext: Built for Speed.<br />Designed for Scale.</h1>
         <p class="erpnext-hero-lead">
-          The most agile, mobile-friendly, and powerful open-source ERP on the planet. ERPNext gives
-          you enterprise-grade functionality without the enterprise price tag. Customize it, scale it,
-          and run your entire business your way—with zero license fees.
+          ERPNext delivers enterprise-grade functionality without the enterprise price tag.
+          Built on the modern Frappe framework, it is fast, mobile-friendly, and fully
+          customisable — so you can run your entire business your way. Ecosoft clients
+          consistently save 60–80% versus SAP and Oracle licensing costs.
         </p>
         <div class="erpnext-hero-actions">
-          <a href="/#contact" class="btn btn-primary">Talk to us</a>
+          <a href="/#contact" class="btn btn-primary">Request a Free Consultation</a>
           <a href="#modules" class="btn btn-outline">Explore modules</a>
         </div>
       </div>
-      <div class="product-hero-logo">
-        <img src="/images/erpnext-logo.png" alt="ERPNext" />
+      <div class="product-hero-panel">
+        <div class="product-hero-logo">
+          <img src="/images/erpnext-logo.png" alt="ERPNext" />
+        </div>
+        <div class="product-hero-stats">
+          <div class="product-stat">
+            <p class="product-stat-number">1M+</p>
+            <p class="product-stat-label">Active users worldwide</p>
+          </div>
+          <div class="product-stat">
+            <p class="product-stat-number">130+</p>
+            <p class="product-stat-label">Ready integrations</p>
+          </div>
+          <div class="product-stat">
+            <p class="product-stat-number">฿0</p>
+            <p class="product-stat-label">Software license cost</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -33,7 +50,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     <div class="container">
       <header class="section-header">
         <p class="eyebrow">Capabilities</p>
-        <h2>What Makes it Epic?</h2>
+        <h2>Enterprise Capabilities, Zero License Cost</h2>
       </header>
       <div class="cards-grid erpnext-features-grid">
         {[
@@ -127,9 +144,9 @@ import BaseLayout from "@layouts/BaseLayout.astro";
         <p class="eyebrow">E-Commerce</p>
         <h2>Website & E-Commerce Integration</h2>
         <p>
-          ERPNext centralizes your website and e-commerce functionalities within the system. It
-          ensures real-time synchronization between your online store and backend operations—so
-          inventory, orders, and customer data are always in sync.
+          Sell online without the integration headache. ERPNext connects your website and
+          online store directly to inventory, accounting, and fulfilment — so every order
+          updates stock, triggers invoicing, and reaches your warehouse automatically.
         </p>
         <a href="/#contact" class="btn btn-primary">Get started</a>
       </div>
@@ -147,14 +164,14 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     <div class="container">
       <header class="section-header">
         <p class="eyebrow">Why ERPNext</p>
-        <h2>8 Reasons ERPNext is the Best Choice</h2>
+        <h2>8 Reasons Leading Organisations Choose ERPNext</h2>
       </header>
       <div class="cards-grid erpnext-advantages-grid">
         {[
           {
             num: "01",
-            title: "Open Source & Pocket Friendly",
-            desc: "No license fees. No vendor lock-in. ERPNext is fully open source, giving you total freedom and full control. Unlike SAP, it won't break the bank.",
+            title: "Open Source & Cost-Effective",
+            desc: "No license fees. No vendor lock-in. ERPNext is fully open source, giving you total freedom and full control over your ERP investment.",
           },
           {
             num: "02",
@@ -163,13 +180,13 @@ import BaseLayout from "@layouts/BaseLayout.astro";
           },
           {
             num: "03",
-            title: "Easily Customizable & Scalable",
-            desc: "Every business is unique. From custom workflows to handling large volumes of data, ERPNext is flexible enough for growing midsize companies.",
+            title: "Highly Customisable & Scalable",
+            desc: "Every business is unique. From custom workflows to handling large data volumes, ERPNext is flexible enough to serve growing organisations of any size.",
           },
           {
             num: "04",
             title: "User-Friendly Interface",
-            desc: "ERPNext offers a clean, intuitive interface that anyone can use — with minimal training. An ERP is only as good as its usability.",
+            desc: "ERPNext offers a clean, role-based interface your team can learn in days — not months. Fast adoption means faster ROI and lower training costs.",
           },
           {
             num: "05",
@@ -179,17 +196,17 @@ import BaseLayout from "@layouts/BaseLayout.astro";
           {
             num: "06",
             title: "Integration Capabilities",
-            desc: "Need to plug into e-commerce, payment gateways, or other tools? ERPNext makes it seamless with smooth integration options.",
+            desc: "Connect ERPNext to e-commerce platforms, payment gateways, and third-party tools with a robust API-first integration layer.",
           },
           {
             num: "07",
-            title: "Cloud Hosting & Effortless Scaling",
-            desc: "Whether you're a startup or a scaling enterprise, ERPNext grows with you. Hosted on the cloud by Frappe for maximum flexibility.",
+            title: "Cloud Hosting & Enterprise Scaling",
+            desc: "From growing businesses to large enterprises, ERPNext scales with your needs. Cloud hosting is available via Frappe Cloud for maximum reliability.",
           },
           {
             num: "08",
             title: "Active Community & Local Support",
-            desc: "Backed by a thriving global community of developers and functional experts — expect rapid updates, bug fixes, and continuous innovation.",
+            desc: "The global ERPNext community releases updates every 6–8 weeks — security patches, new features, and bug fixes included. Ecosoft's local team ensures those updates work for Thai compliance.",
           },
         ].map((a) => (
           <div class="info-card erpnext-advantage-card">
@@ -207,7 +224,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     <div class="container">
       <header class="section-header">
         <p class="eyebrow">Pricing</p>
-        <h2>ERPNext implementation packages.</h2>
+        <h2>ERPNext Implementation Packages</h2>
         <p>Fixed-scope packages for straightforward implementations. Complex organisations are covered by our Enterprise tier.</p>
       </header>
 
@@ -340,12 +357,13 @@ import BaseLayout from "@layouts/BaseLayout.astro";
   <!-- FINAL CTA -->
   <section class="section section-accent erpnext-cta">
     <div class="container">
-      <h2>Ready for an ERP That Actually Works for You?</h2>
+      <h2>Ready to See ERPNext in Action?</h2>
       <p>
-        No licenses. No limits. Just powerful, flexible, all-in-one business management — tailored
-        to your growth. It's free, forever. Let Ecosoft guide your implementation.
+        Zero license fees. Full source code ownership. Thai compliance built in.
+        Our team has delivered 40+ ERPNext implementations across manufacturing,
+        logistics, government, and more. Let's build yours.
       </p>
-      <a href="/#contact" class="btn btn-primary">Talk to our team</a>
+      <a href="/#contact" class="btn btn-primary">Request a Free Consultation</a>
     </div>
   </section>
 </BaseLayout>
@@ -367,6 +385,47 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 </script>
 
 <style>
+  /* Hero — override global grid so panel gets equal column */
+  .erpnext-hero-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-hero-panel {
+    background: linear-gradient(145deg, var(--bg-card), var(--bg-card-blue));
+    border: 1px solid var(--border-blue);
+    border-radius: 1.2rem;
+    padding: 1.75rem;
+    box-shadow: 0 10px 32px rgba(59, 130, 246, 0.12);
+  }
+
+  .product-hero-panel .product-hero-logo {
+    justify-content: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .product-hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-blue);
+  }
+
+  .product-stat-number {
+    margin: 0 0 0.15rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #f97316;
+    line-height: 1;
+  }
+
+  .product-stat-label {
+    margin: 0;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+  }
+
   /* Hero */
   .erpnext-hero {
     padding-block: 5rem;
@@ -431,7 +490,16 @@ import BaseLayout from "@layouts/BaseLayout.astro";
   }
 
   .erpnext-feature-icon {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-card-blue);
+    border: 1px solid var(--border-blue);
+    border-radius: 8px;
+    flex-shrink: 0;
   }
 
   /* Modules grid */
@@ -440,9 +508,17 @@ import BaseLayout from "@layouts/BaseLayout.astro";
   }
 
   .erpnext-module-icon {
-    font-size: 1.8rem;
-    display: block;
-    margin-bottom: 0.5rem;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: var(--bg-card-blue);
+    border: 1px solid var(--border-blue);
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+    flex-shrink: 0;
   }
 
   /* E-commerce */

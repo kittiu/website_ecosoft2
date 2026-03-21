@@ -17,7 +17,7 @@
   --footer-bg:       #f9fafb;
   --footer-border:   #e5e7eb;
   --footer-text:     #6b7280;
-  --footer-heading:  #022c22;
+  --footer-heading:  #111827;
   --footer-bottom-border: #bbf7d0;
   --input-bg:        #ffffff;
   --input-border:    #e5e7eb;
@@ -726,8 +726,9 @@ html[data-theme="dark"] .hero {
 .form-success {
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
-  background: #d1fae5;
-  color: #065f46;
+  background: var(--bg-card-blue);
+  color: var(--text);
+  border: 1px solid var(--border-blue);
   font-size: 0.9rem;
   font-weight: 500;
 }
@@ -1135,8 +1136,8 @@ html[data-theme="dark"] .hero {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr));
-  gap: 2.3rem;
+  grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr));
+  gap: 2rem;
   padding-bottom: 2rem;
 }
 
@@ -1151,6 +1152,10 @@ html[data-theme="dark"] .hero {
   margin: 0 0 0.6rem;
   font-size: 0.9rem;
   color: var(--footer-heading);
+}
+
+.footer-heading--spaced {
+  margin-top: 1.2rem;
 }
 
 .footer-text {
@@ -1225,7 +1230,7 @@ html[data-theme="dark"] .hero {
   }
 
   .footer-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

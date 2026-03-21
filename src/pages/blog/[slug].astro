@@ -47,6 +47,20 @@ const { Content } = await post.render();
         <Content />
       </div>
 
+      <div class="post-cta">
+        <p class="post-cta-eyebrow">Ready to take the next step?</p>
+        <h2 class="post-cta-heading">Let's Talk About Your ERP Project</h2>
+        <p class="post-cta-body">
+          Ecosoft has helped 40+ Thai organisations implement Odoo and ERPNext — from
+          manufacturing and logistics to government agencies and space technology.
+          Get a free, no-obligation consultation with our team.
+        </p>
+        <div class="post-cta-actions">
+          <a href="/#contact" class="btn btn-primary">Request a Free Consultation</a>
+          <a href="/about" class="btn btn-outline">Learn about Ecosoft</a>
+        </div>
+      </div>
+
       <footer class="post-footer">
         <a href="/blog" class="btn btn-outline">← Back to Blog</a>
       </footer>
@@ -75,7 +89,7 @@ const { Content } = await post.render();
     max-width: 44rem;
     margin-bottom: 2.5rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid #dbeafe;
+    border-bottom: 1px solid var(--border-blue);
   }
 
   .post-meta {
@@ -97,21 +111,21 @@ const { Content } = await post.render();
 
   .post-date,
   .post-author {
-    color: #9ca3af;
+    color: var(--text-faint);
   }
 
   .post-title {
     font-size: clamp(1.7rem, 3vw, 2.4rem);
     letter-spacing: -0.03em;
     margin: 0 0 0.75rem;
-    color: #0f172a;
+    color: var(--text);
     line-height: 1.15;
   }
 
   .post-description {
     margin: 0 0 1rem;
     font-size: 1rem;
-    color: #4b5563;
+    color: var(--text-muted);
     line-height: 1.6;
   }
 
@@ -124,8 +138,8 @@ const { Content } = await post.render();
   .post-tag {
     font-size: 0.72rem;
     color: #1d4ed8;
-    background: #eff6ff;
-    border: 1px solid #bfdbfe;
+    background: var(--bg-card-blue);
+    border: 1px solid var(--border-blue);
     border-radius: 999px;
     padding: 0.2rem 0.6rem;
   }
@@ -134,19 +148,19 @@ const { Content } = await post.render();
     max-width: 44rem;
     font-size: 0.97rem;
     line-height: 1.8;
-    color: #1f2937;
+    color: var(--text);
   }
 
   .post-body :global(h2) {
     font-size: 1.35rem;
     letter-spacing: -0.02em;
-    color: #0f172a;
+    color: var(--text);
     margin: 2rem 0 0.6rem;
   }
 
   .post-body :global(h3) {
     font-size: 1.1rem;
-    color: #0f172a;
+    color: var(--text);
     margin: 1.5rem 0 0.4rem;
   }
 
@@ -168,10 +182,10 @@ const { Content } = await post.render();
     border-left: 3px solid #f97316;
     margin: 1.5rem 0;
     padding: 0.75rem 1.2rem;
-    background: #fffbeb;
+    background: var(--bg-card-blue);
     border-radius: 0 0.5rem 0.5rem 0;
     font-style: italic;
-    color: #374151;
+    color: var(--text-subtle);
   }
 
   .post-body :global(blockquote p) {
@@ -186,24 +200,26 @@ const { Content } = await post.render();
   }
 
   .post-body :global(th) {
-    background: #eff6ff;
+    background: var(--bg-card-blue);
     padding: 0.5rem 0.8rem;
     text-align: left;
     font-weight: 600;
-    border: 1px solid #dbeafe;
+    border: 1px solid var(--border-blue);
+    color: var(--text);
   }
 
   .post-body :global(td) {
     padding: 0.5rem 0.8rem;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
   }
 
   .post-body :global(strong) {
-    color: #0f172a;
+    color: var(--text);
   }
 
   .post-body :global(code) {
-    background: #f1f5f9;
+    background: var(--bg-card-blue);
     padding: 0.15rem 0.4rem;
     border-radius: 0.3rem;
     font-size: 0.88em;
@@ -214,7 +230,7 @@ const { Content } = await post.render();
     margin-bottom: 2rem;
     border-radius: 0.9rem;
     overflow: hidden;
-    border: 1px solid #dbeafe;
+    border: 1px solid var(--border-blue);
   }
 
   .post-cover-img {
@@ -224,10 +240,50 @@ const { Content } = await post.render();
     display: block;
   }
 
-  .post-footer {
+  .post-cta {
     max-width: 44rem;
     margin-top: 3rem;
+    padding: 2rem 2.2rem;
+    border-radius: 1.2rem;
+    background: radial-gradient(circle at top left, #2563eb 0, #bfdbfe 60%);
+    color: #0f172a;
+  }
+
+  .post-cta-eyebrow {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #1d4ed8;
+    margin: 0 0 0.5rem;
+  }
+
+  .post-cta-heading {
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem;
+    color: #0f172a;
+  }
+
+  .post-cta-body {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #1e3a5f;
+    margin: 0 0 1.25rem;
+    max-width: 38rem;
+  }
+
+  .post-cta-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .post-footer {
+    max-width: 44rem;
+    margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid #dbeafe;
+    border-top: 1px solid var(--border);
   }
 </style>
